@@ -10,7 +10,13 @@ fun main() {
     array.add(15)
     array.add(28)
     array.add(30)
-    System.out.println(binarySearch(array, array.size - 1, 0, 28))
+   // System.out.println(binarySearch(array, array.size - 1, 0, 28))
+
+    //  System.out.println(naiveStringSearch("harold said haha in hamburg","in"));
+
+    //  System.out.println(naiveStringSearch("harold said haha in hamburg","in"));
+    println(naiveStringSearch("lorie loled", "lol"))
+
 }
 
 /**------------------Linear Search O(n)----------------*/
@@ -58,11 +64,29 @@ fun binarySearch(arrayList: ArrayList<Int>, end: Int, start: Int, value: Int): I
     return -1
 }
 
-
-
-/**-----------------Naive String search-------------*/
+/**-----------------Naive String search O(n*m)-------------*/
 /**Ex:-Search for a substring in a larger string:-
  * "harold said haha in hamburg"
  * serach for "haha"
  *
- * */
+ */
+//"harold said haha in hamburg"             "said"
+fun naiveStringSearch(largerString: String, subString: String): Int {
+    var count = 0
+    for (i in 0 until largerString.length) {
+        for (j in 0 until subString.length) {
+            if (subString[j] != largerString[i + j]) {
+                break
+            }
+            if (j == subString.length - 1) {
+                println("find one")
+                count++
+            }
+        }
+    }
+    return count
+}
+
+
+
+
