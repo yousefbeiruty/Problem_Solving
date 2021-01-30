@@ -37,15 +37,17 @@ class Queue<T>{
     }
 
     //Removing from the first(head)
-    fun dequeue(){
-        if (size==0) return
+    fun dequeue(): QueueNode<T>?{
+        if (size==0) return null
 
         if (first==last){
             last=null
         }
         // F              L
         // 1 -> 2 -> 3 -> 4   -> newNode
+        val temp=first
         first=first?.next
         size--
+        return temp
     }
 }
