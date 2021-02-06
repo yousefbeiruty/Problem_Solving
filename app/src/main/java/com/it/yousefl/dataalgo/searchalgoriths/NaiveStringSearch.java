@@ -2,6 +2,9 @@ package com.it.yousefl.dataalgo.searchalgoriths;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class NaiveStringSearch {
     public static void main(String[] args) {
         //  System.out.println(naiveStringSearch("harold said haha in hamburg","in"));
@@ -31,4 +34,11 @@ public class NaiveStringSearch {
         }
         return count;
     }
+
+String s[]= new String[10];
+
 }
+
+
+
+
