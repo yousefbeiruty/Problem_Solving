@@ -35,7 +35,6 @@ public class NaiveStringSearch {
         return count;
     }
 
-String s[]= new String[10];
 
 }
 
