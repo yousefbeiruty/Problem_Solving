@@ -74,7 +74,7 @@ fun main() {
     list.traverse()
     System.out.println()
     System.out.println("---------------------------------------------------")
-    list.reverse2()
+    list.reverse()
     list.traverse()
 }
 
@@ -279,7 +279,7 @@ class SinglyLinkedList<T> {
     fun reverse() {
 
 /*TODO:-the solution is in processing*/
-
+/**
 //h+n+p    next    t
 //Hello --> 0  -->10-->null
 
@@ -293,6 +293,27 @@ class SinglyLinkedList<T> {
 //   null<-Hello -->0 -->10-->null
 // h            t
 //10 --> 0 --> Hello -->null
+
+
+
+//h        next+n          t
+// 1->     2       ->3->4->5
+//h+pn             t
+//1->  2  ->3->4->5
+
+
+
+//H               T
+//5  ->4->3->2 -> 1
+
+h+n+p     next    t
+Hello --> 0    -->10
+
+h+p      n+next    t
+Hello -->  0    -->10
+
+ 10-->0-->Hello
+**/
         var node=head
         head=tail
         tail=node

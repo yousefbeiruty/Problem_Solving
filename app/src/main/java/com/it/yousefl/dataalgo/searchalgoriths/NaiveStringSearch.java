@@ -34,7 +34,12 @@ public class NaiveStringSearch {
         }
         return count;
     }
-
+    public void reverseString(char[] s) {
+        ArrayList<Character>arrayList=new ArrayList<>();
+        for(int i=s.length;i>0;i--){
+            arrayList.add(s[i]);
+        }
+    }
 
 }
 

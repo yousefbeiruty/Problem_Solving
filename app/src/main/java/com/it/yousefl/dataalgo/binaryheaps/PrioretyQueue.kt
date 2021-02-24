@@ -7,9 +7,9 @@ fun main() {
     er.enqueue("common cold",5)
     er.enqueue("gunshot",1)
     er.enqueue("broken arm",2)
-    er.enqueue("glass in foot",3)
 
-    er.dequeue()
+    System.out.println(er.enqueue("glass in foot",3).get(0).value)
+    System.out.println(er.dequeue().value)
 }
 
 class NodePriorety<T>(var value: T, var priorety: Int)
@@ -40,7 +40,7 @@ class PrioretyQueue<T> {
 
     }
 
-    fun dequeue():ArrayList<NodePriorety<String>>{
+    fun dequeue(): NodePriorety<String> {
         val min=values[0]
         val end=values[values.size-1]
         values.removeAt(values.size-1)
@@ -49,7 +49,7 @@ class PrioretyQueue<T> {
             //Trickle down
             sinkDown()
         }
-        return values
+        return  min
     }
 
     fun sinkDown(){
@@ -86,6 +86,9 @@ class PrioretyQueue<T> {
             index=swap
         }
     }
+
+
+
 
 
 }
