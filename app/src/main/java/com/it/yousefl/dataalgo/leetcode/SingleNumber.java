@@ -1,6 +1,8 @@
 package com.it.yousefl.dataalgo.leetcode;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class SingleNumber {
 
@@ -9,6 +11,7 @@ public class SingleNumber {
        int nums[] = {4,1,2,1,2};
         System.out.println("Output: "+singleNumber(nums));
     }
+
 
     public static int singleNumber(int[] nums) {
         HashMap<Integer,Integer> map=new  HashMap<Integer,Integer>();
