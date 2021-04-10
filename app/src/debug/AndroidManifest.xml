@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.it.yousefl.dataalgo">
+
+    <application>
+        <activity android:name=".HiltTestActivity"
+            android:exported="false"/>
+<!--   expored means that we can access this activity from here not from outside-->
+    </application>
+
+</manifest>
